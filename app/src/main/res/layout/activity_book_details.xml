@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDB3EF"
+    tools:context=".BookDetails">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="183dp"
+        android:layout_height="175dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="selectImage"
+        app:layout_constraintBottom_toTopOf="@+id/bookNameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="115dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="Book's name :"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/bookNameText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="112dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Author's name : "
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/text3"
+        app:layout_constraintEnd_toStartOf="@+id/authorNameText" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="117dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Number of page : "
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/pageText" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="111dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="455dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="30dp"
+        android:text="Date of issue : "
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/saveBtn"
+        app:layout_constraintEnd_toStartOf="@+id/issueText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/bookNameText"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/authorNameText"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookNameText" />
+
+    <EditText
+        android:id="@+id/pageText"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authorNameText"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/issueText"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pageText"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="116dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="saveButtonClick"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:iconPadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteBtn" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="116dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="deleteButtonClick"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:iconPadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
